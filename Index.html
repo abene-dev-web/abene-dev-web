@@ -1,0 +1,1160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abenezer Akalu | Professional Services</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4ade80;
+            --danger: #f43f5e;
+            --warning: #f59e0b;
+            --gray: #6c757d;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--accent);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .btn-lg {
+            padding: 14px 36px;
+            font-size: 1.1rem;
+        }
+
+        /* Section Common Styles */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--accent);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--dark);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* Form Styles */
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--dark);
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--secondary);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        .form-text {
+            font-size: 0.85rem;
+            margin-top: 5px;
+            color: var(--gray);
+        }
+
+        .error-message {
+            color: var(--danger);
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        /* Toggle between forms */
+        .form-toggle {
+            display: none;
+        }
+
+        /* Chat Section */
+        .chat-container {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--dark);
+            height: 500px;
+        }
+
+        .chat-sidebar {
+            width: 30%;
+            background: rgba(67, 97, 238, 0.1);
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .chat-main {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 12px 18px;
+            border-radius: 18px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .message.received {
+            background: rgba(67, 97, 238, 0.1);
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message.sent {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        /* Live Stream */
+        .stream-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--dark);
+        }
+
+        .stream-player {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+        }
+
+        .stream-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .stream-info {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .stream-info img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .stream-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .stream-stats {
+            display: flex;
+            gap: 20px;
+            color: var(--gray);
+        }
+
+        .stream-actions {
+            display: flex;
+            padding: 15px 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--accent);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .section {
+                padding: 80px 0;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .chat-container {
+                flex-direction: column;
+                height: auto;
+            }
+            .chat-sidebar, .chat-main {
+                width: 100%;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .form-container {
+                padding: 30px 20px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .btn-lg {
+                padding: 12px 24px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-crown"></i>
+                    <span>Abenezer Akalu</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#book">Book</a></li>
+                    <li><a href="#chat">Chat</a></li>
+                    <li><a href="#stream">Live Stream</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="loginBtn">Login</button>
+                    <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Website development by Abenezer Akalu</h1>
+                <p>Experience advanced and professional Website development tailored to your needs. Join our community today and unlock your potential.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg">Explore Services</button>
+                    <button class="btn btn-outline btn-lg">Watch Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Premium Services</h2>
+                <p class="section-subtitle">Discover the range of professional developed Websites.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Website development</h3>
+                    <p>we develop complex and modern website for company and personal at very low price  by just using frontend language.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Application Development</h3>
+                    <p>we have advanced and skilled frontend developer for developing apps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>school registeration</h3>
+                    <p>we can develop school online registeration system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup/Login Section -->
+    <section class="section" id="auth">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Join Our Community</h2>
+                <p class="section-subtitle">Create an account to access exclusive content, templeat Websites , and connect with  professionals developer.</p>
+            </div>
+            
+            <div class="form-container">
+                <!-- Signup Form -->
+                <form id="signupForm" class="auth-form">
+                    <h2 class="form-title">Create Account</h2>
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" class="form-control" placeholder="Enter your full name">
+                        <div class="error-message" id="nameError">Please enter a valid name (min 3 characters)</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" class="form-control" placeholder="Enter your email">
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" class="form-control" placeholder="Create a password">
+                        <div class="error-message" id="passwordError">Password must be at least 8 characters with uppercase, lowercase, number and symbol</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupConfirm">Confirm Password</label>
+                        <input type="password" id="signupConfirm" class="form-control" placeholder="Confirm your password">
+                        <div class="error-message" id="confirmError">Passwords do not match</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Sign Up</button>
+                    <p class="form-text">Already have an account? <a href="#" id="showLogin">Login</a></p>
+                </form>
+                
+                <!-- Login Form (Hidden by default) -->
+                <form id="loginForm" class="auth-form" style="display: none;">
+                    <h2 class="form-title">Login to Account</h2>
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" class="form-control" placeholder="Enter your email">
+                        <div class="error-message" id="loginEmailError">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password">
+                        <div class="error-message" id="loginPasswordError">Password must be at least 8 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" id="remember" class="form-check-input">
+                            <label for="remember" class="form-check-label">Remember me</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Login</button>
+                    <p class="form-text">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Section -->
+    <section class="section" id="book">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book a Session</h2>
+                <p class="section-subtitle">Schedule a one-on-one contact  with Abenezer Akalu.</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="bookingForm">
+                    <h2 class="form-title">Schedule Your Appointment</h2>
+                    <div class="form-group">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" class="form-control" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingEmail">Email Address</label>
+                        <input type="email" id="bookingEmail" class="form-control" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingService">Service Type</label>
+                        <select id="bookingService" class="form-control">
+                            <option value="">Select a service</option>
+                            <option value="consulting">Website development</option>
+                            <option value="training">Application developement</option>
+                            <option value="online ordering">school registeration system</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingDate">Preferred Date & Time</label>
+                        <input type="datetime-local" id="bookingDate" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingMessage">Special Requests</label>
+                        <textarea id="bookingMessage" class="form-control" rows="4" placeholder="Any special requirements or questions"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Book Session</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section class="section" id="chat">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Community Chat</h2>
+                <p class="section-subtitle">Connect with other professionals in real-time discussions.</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <h3>Active Conversations</h3>
+                    <div class="chat-contact active">
+                        <div class="contact-info">
+                            <h4>General Discussion</h4>
+                            <p>Community chat for everyone</p>
+                        </div>
+                    </div>
+                    <div class="chat-contact">
+                        <div class="contact-info">
+                            <h4>Career Development</h4>
+                            <p>Professional growth strategies</p>
+                        </div>
+                    </div>
+                    <div class="chat-contact">
+                        <div class="contact-info">
+                            <h4>Industry Insights</h4>
+                            <p>Latest trends and analysis</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-main">
+                    <div class="chat-header">
+                        <div class="user-info">
+                            <h3>General Discussion</h3>
+                            <p>24 participants online</p>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message received">
+                            <div class="message-text">Hello everyone! Welcome to our community chat.</div>
+                            <div class="message-time">10:15 AM</div>
+                        </div>
+                        <div class="message sent">
+                            <div class="message-text">Great to be here! Looking forward to learning from everyone.</div>
+                            <div class="message-time">10:17 AM</div>
+                        </div>
+                        <div class="message received">
+                            <div class="message-text">Has anyone attended Abenezer's workshop last week? It was amazing!</div>
+                            <div class="message-time">10:20 AM</div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Type your message...">
+                        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Stream Section -->
+    <section class="section" id="stream">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Live Stream</h2>
+                <p class="section-subtitle">Join our live sessions for real-time learning and interaction.</p>
+            </div>
+            
+            <div class="stream-container">
+                <div class="stream-player">
+                    <iframe src="https://maps.app.goo.gl/sC674qiTZzdbrwU4A" allowfullscreen></iframe>
+                </div>
+                <div class="stream-info">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Abenezer Akalu">
+                    <div>
+                        <div class="stream-title">Career Development Strategies for 2023</div>
+                        <div class="stream-stats">
+                            <span><i class="fas fa-eye"></i> 1.2K watching</span>
+                            <span><i class="fas fa-comment"></i> 243 comments</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stream-actions">
+                    <div class="action-buttons">
+                        <button class="btn btn-outline"><i class="fas fa-thumbs-up"></i> Like</button>
+                        <button class="btn btn-outline"><i class="fas fa-share"></i> Share</button>
+                    </div>
+                    <div class="viewers">
+                        <i class="fas fa-users"></i> 1.2K viewers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="section" id="support">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Support Center</h2>
+                <p class="section-subtitle">We're here to help. Reach out to us with any questions or issues.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Contact Support</h3>
+                    <p>Our team is ready to assist you with any questions or technical issues.</p>
+                    <button class="btn btn-outline" style="margin-top: 20px;">Contact Us</button>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Knowledge Base</h3>
+                    <p>Find answers to common questions in our comprehensive documentation.</p>
+                    <button class="btn btn-outline" style="margin-top: 20px;">Browse Articles</button>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Community Forum</h3>
+                    <p>Connect with other users and share knowledge in our community forum.</p>
+                    <button class="btn btn-outline" style="margin-top: 20px;">Join Forum</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-crown"></i>
+                        <span>Abenezer Akalu</span>
+                    </div>
+                    <p style="margin-top: 20px; opacity: 0.8;">Providing professional services and coaching to help you achieve your career goals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Websites development</a></li>
+                        <li><a href="#">Application Development</a></li>
+                        <li><a href="#">Development school registeration sys</a></li>
+                        <li><a href="#">Structerd database developement</a></li>
+                        <li><a href="#">online ordering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#book">Book Session</a></li>
+                        <li><a href="#chat">Community Chat</a></li>
+                        <li><a href="#stream">Live Stream</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#support">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h2 class="footer-col">contact-info</h2>
+            <p>
+                phone:+251964128469
+
+            </p>
+            <div class="copyright">
+                <p>&copy; 2023 Abenezer Akalu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle between login and signup forms
+        document.getElementById('showLogin').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        });
+
+        document.getElementById('showSignup').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signupForm').style.display = 'block';
+        });
+
+        // Form validation with regular expressions
+        const signupForm = document.getElementById('signupForm');
+        const loginForm = document.getElementById('loginForm');
+        
+        // Name validation: at least 3 characters
+        const nameRegex = /^[a-zA-Z\s]{3,}$/;
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Password validation: min 8 chars, at least one uppercase, one lowercase, one number and one special char
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            
+            // Validate name
+            const name = document.getElementById('signupName').value;
+            if (!nameRegex.test(name)) {
+                document.getElementById('nameError').style.display = 'block';
+                valid = false;
+            } else {
+                document.getElementById('nameError').style.display = 'none';
+            }
+            
+            // Validate email
+            const email = document.getElementById('signupEmail').value;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                valid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+            
+            // Validate password
+            const password = document.getElementById('signupPassword').value;
+            if (!passwordRegex.test(password)) {
+                document.getElementById('passwordError').style.display = 'block';
+                valid = false;
+            } else {
+                document.getElementById('passwordError').style.display = 'none';
+            }
+            
+            // Validate password confirmation
+            const confirm = document.getElementById('signupConfirm').value;
+            if (password !== confirm) {
+                document.getElementById('confirmError').style.display = 'block';
+                valid = false;
+            } else {
+                document.getElementById('confirmError').style.display = 'none';
+            }
+            
+            if (valid) {
+                alert('Signup successful! Welcome to our community.');
+                signupForm.reset();
+            }
+        });
+        
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            
+            // Validate email
+            const email = document.getElementById('loginEmail').value;
+            if (!emailRegex.test(email)) {
+                document.getElementById('loginEmailError').style.display = 'block';
+                valid = false;
+            } else {
+                document.getElementById('loginEmailError').style.display = 'none';
+            }
+            
+            // Validate password (simpler for login)
+            const password = document.getElementById('loginPassword').value;
+            if (password.length < 8) {
+                document.getElementById('loginPasswordError').style.display = 'block';
+                valid = false;
+            } else {
+                document.getElementById('loginPasswordError').style.display = 'none';
+            }
+            
+            if (valid) {
+                alert('Login successful! Redirecting to your dashboard...');
+                loginForm.reset();
+            }
+        });
+        
+        // Booking form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your session has been booked successfully! We will send a confirmation email shortly.');
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Simulate chat functionality
+        const chatInput = document.querySelector('.chat-input input');
+        const chatMessages = document.querySelector('.chat-messages');
+        
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message sent';
+                
+                const messageText = document.createElement('div');
+                messageText.className = 'message-text';
+                messageText.textContent = this.value;
+                
+                const messageTime = document.createElement('div');
+                messageTime.className = 'message-time';
+                
+                const now = new Date();
+                messageTime.textContent = now.getHours() + ':' + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
+                
+                messageDiv.appendChild(messageText);
+                messageDiv.appendChild(messageTime);
+                chatMessages.appendChild(messageDiv);
+                
+                this.value = '';
+                
+                // Auto scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                // Simulate reply after 1-2 seconds
+                setTimeout(() => {
+                    const replyDiv = document.createElement('div');
+                    replyDiv.className = 'message received';
+                    
+                    const replyText = document.createElement('div');
+                    replyText.className = 'message-text';
+                    replyText.textContent = 'Thanks for your message! Our team will respond shortly.';
+                    
+                    const replyTime = document.createElement('div');
+                    replyTime.className = 'message-time';
+                    
+                    const replyNow = new Date();
+                    replyTime.textContent = replyNow.getHours() + ':' + (replyNow.getMinutes() < 10 ? '0' : '') + replyNow.getMinutes();
+                    
+                    replyDiv.appendChild(replyText);
+                    replyDiv.appendChild(replyTime);
+                    chatMessages.appendChild(replyDiv);
+                    
+                    // Auto scroll to bottom again
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000 + Math.random() * 1000);
+            }
+        });
+    </script>
+</body>
+</html>
